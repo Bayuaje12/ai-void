@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: x-void-ai-backend
+    runtime: node
+    rootDir: backend
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: OPENAI_API_KEY
+        sync: false
+      - key: REALTIME_MODEL
+        value: gpt-realtime
+      - key: REALTIME_VOICE
+        value: shimmer
